@@ -18,6 +18,7 @@ const createCardElement = (item, isCart = false) => {
   const div = document.createElement("div");
   div.classList.add("card");
   div.id = isCart ? `cart-card-${item.id}` : `card-${item.id}`;
+  div.role = isCart ? 'cart' : 'store'
   div.draggable = true;
   div.innerHTML = `
     <p>${item.name}</p> -
